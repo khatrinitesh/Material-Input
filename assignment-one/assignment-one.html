@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Repository</title>
+	<link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+	<form action="">
+		<div class="form_group">
+		        <label for="fname" class="lbl">Firstname</label>
+		        <input type="text" id="fname" name="fname" class="form_control" />
+		     </div>
+		    <div class="form_group">
+		        <label for="lname" class="lbl">Lastname</label>
+		        <input type="text" id="lname" name="lname" class="form_control" />
+		     </div>
+		    <div class="form_group">
+		        <label for="password" class="lbl">Password</label>
+		        <input type="password" id="password" name="password" class="form_control" />
+		     </div>
+	</form>
+
+	<script type='text/javascript' src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+	<script type='text/javascript'>
+		$(document).ready(function(){
+			$("form :input").focusin(function(){
+				$(this).parent().addClass('lbl_active');
+			});
+			$("form :input").focusout(function(){
+				if($(this).val()==="")
+				$(this).parent().removeClass('lbl_active');
+			});
+		});
+	</script>
+</body>
+</html>

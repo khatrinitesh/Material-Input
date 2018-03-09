@@ -1,0 +1,55 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.container{
+	max-width: 1170px;
+	margin: 0 auto;
+}
+
+ul,ol{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.clr::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* start */
+form{
+	max-width: 600px;
+	margin: 20px auto;
+}
+
+.form_group{
+	margin: 0 0 20px;
+	position: relative;
+}
+
+form .lbl{
+	-webkit-transform: translate(5px,0px);
+	-ms-transform: translate(5px,0px);
+	-o-transform: translate(5px,0px);
+	transform: translate(5px,0px);
+	position: absolute;
+	display: block;
+}
+
+form .lbl_active  .lbl{
+	-webkit-transform: translate(0px,-20px);
+	-ms-transform: translate(0px,-20px);
+	-o-transform: translate(0px,-20px);
+	transform: translate(0px,-20px);
+	-webkit-transition: translate .3s linear;
+	-o-transition: translate .3s linear;
+	transition: translate .3s linear;
+	color: red;
+}
