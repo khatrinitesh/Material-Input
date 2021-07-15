@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Material input</title>
+	<link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+	<form action="" class="container">
+
+	 <div class="form_group">
+	    <label for="first-name" class="label_control">First Name</label>
+	    <input type="text" class="form_control" id="first-name">
+	  </div>
+	  
+	   <div class="form_group">
+	    <label for="first-name" class="label_control">Last Name</label>
+	    <input type="text" class="form_control" id="last-name">
+	  </div>
+
+	    <div class="form_group">
+	    <label for="address" class="label_control">Address</label>
+	    <input type="text" class="form_control" id="address">
+	  </div>
+
+	</form>
+	<script type="text/javascript" src='js/jquery-1.12.0.min.js'></script>
+	<script type="text/javascript">
+		$(".form_control").focus(function(){
+			$(this).parent().addClass('is_active is_completed')
+		});
+
+		$(".form_control").focusout(function(){
+			if($(this).val()==="")
+				$(this).parent().removeClass("is_completed");
+				$(this).parent().removeClass("is_active");
+		});
+	</script>
+</body>
+</html>
